@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tlswltn/taxrefund.git/static/css/main.d057d085.chunk.css",
+    "main.js": "/tlswltn/taxrefund.git/static/js/main.a989d184.chunk.js",
+    "main.js.map": "/tlswltn/taxrefund.git/static/js/main.a989d184.chunk.js.map",
+    "runtime-main.js": "/tlswltn/taxrefund.git/static/js/runtime-main.bafe6656.js",
+    "runtime-main.js.map": "/tlswltn/taxrefund.git/static/js/runtime-main.bafe6656.js.map",
+    "static/js/2.589d84b8.chunk.js": "/tlswltn/taxrefund.git/static/js/2.589d84b8.chunk.js",
+    "static/js/2.589d84b8.chunk.js.map": "/tlswltn/taxrefund.git/static/js/2.589d84b8.chunk.js.map",
+    "static/js/3.b3440adf.chunk.js": "/tlswltn/taxrefund.git/static/js/3.b3440adf.chunk.js",
+    "static/js/3.b3440adf.chunk.js.map": "/tlswltn/taxrefund.git/static/js/3.b3440adf.chunk.js.map",
+    "index.html": "/tlswltn/taxrefund.git/index.html",
+    "static/css/main.d057d085.chunk.css.map": "/tlswltn/taxrefund.git/static/css/main.d057d085.chunk.css.map",
+    "static/js/2.589d84b8.chunk.js.LICENSE.txt": "/tlswltn/taxrefund.git/static/js/2.589d84b8.chunk.js.LICENSE.txt",
+    "static/media/pd_taxRefund_mainImg.955d11d8.png": "/tlswltn/taxrefund.git/static/media/pd_taxRefund_mainImg.955d11d8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bafe6656.js",
+    "static/js/2.589d84b8.chunk.js",
+    "static/css/main.d057d085.chunk.css",
+    "static/js/main.a989d184.chunk.js"
+  ]
+}
