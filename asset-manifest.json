@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/taxrefund/static/css/main.d057d085.chunk.css",
-    "main.js": "/taxrefund/static/js/main.af1c80ee.chunk.js",
-    "main.js.map": "/taxrefund/static/js/main.af1c80ee.chunk.js.map",
+    "main.js": "/taxrefund/static/js/main.827ccd64.chunk.js",
+    "main.js.map": "/taxrefund/static/js/main.827ccd64.chunk.js.map",
     "runtime-main.js": "/taxrefund/static/js/runtime-main.c150d495.js",
     "runtime-main.js.map": "/taxrefund/static/js/runtime-main.c150d495.js.map",
     "static/js/2.d35eaa7c.chunk.js": "/taxrefund/static/js/2.d35eaa7c.chunk.js",
@@ -14,12 +14,13 @@
     "static/js/2.d35eaa7c.chunk.js.LICENSE.txt": "/taxrefund/static/js/2.d35eaa7c.chunk.js.LICENSE.txt",
     "static/media/pd_taxRefund_callImg.33335ad9.png": "/taxrefund/static/media/pd_taxRefund_callImg.33335ad9.png",
     "static/media/pd_taxRefund_hometaxLogo.f862bb09.jpg": "/taxrefund/static/media/pd_taxRefund_hometaxLogo.f862bb09.jpg",
-    "static/media/pd_taxRefund_mainImg.955d11d8.png": "/taxrefund/static/media/pd_taxRefund_mainImg.955d11d8.png"
+    "static/media/pd_taxRefund_mainImg.955d11d8.png": "/taxrefund/static/media/pd_taxRefund_mainImg.955d11d8.png",
+    "static/media/videoinfo1.3a2c50c7.png": "/taxrefund/static/media/videoinfo1.3a2c50c7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c150d495.js",
     "static/js/2.d35eaa7c.chunk.js",
     "static/css/main.d057d085.chunk.css",
-    "static/js/main.af1c80ee.chunk.js"
+    "static/js/main.827ccd64.chunk.js"
   ]
 }
