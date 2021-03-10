@@ -8,6 +8,8 @@ const Footer = () => {
       height: 100,
       textAlign: "center",
       marigin: "auto",
+      backgroundColor: "#333333",
+      color: "#FFFFFF",
     },
     add: {
       width: "100%",

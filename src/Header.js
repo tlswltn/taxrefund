@@ -6,6 +6,8 @@ import sns2 from "./images/pd_common_snsnav02.png";
 import sns3 from "./images/pd_common_snsnav03.png";
 import Button from "@material-ui/core/Button";
 import Step2 from "./Step2";
+import Step3 from "./Step3";
+import Step4 from "./Step4";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -247,6 +249,8 @@ const Header = () => {
         </div>
       </div>
       <Step2 />
+      <Step3 />
+      <Step4 />
     </div>
   );
 };
