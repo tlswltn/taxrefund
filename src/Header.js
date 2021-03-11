@@ -7,6 +7,7 @@ import sns3 from "./images/pd_common_snsnav03.png";
 
 import Modal from "@material-ui/core/Modal";
 import DocumentInfo from "./DocumentInfo";
+import Test from "./Test";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -167,18 +168,21 @@ const Header = () => {
     },
   });
   const classes = useStyles();
-  const body = (
-    <div className={classes.paper}>
-      <h2 id="simple-modal-title">Text in a modal</h2>
-      <p id="simple-modal-description">
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-      </p>
-      {/* <SimpleModal /> */}
-    </div>
-  );
+  // const body = (
+  //   <div className={classes.paper}>
+  //     <h2 id="simple-modal-title">Text in a modal</h2>
+  //     <p id="simple-modal-description">
+  //       Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+  //     </p>
+  //     {/* <SimpleModal /> */}
+  //   </div>
+  // );
   const [open, setOpen] = React.useState(false);
+  const [modal, setModal] = React.useState(0);
 
-  const handleOpen = () => {
+  const handleOpen = (id) => {
+    console.log("id", id);
+    setModal(id);
     setOpen(true);
   };
 
@@ -221,7 +225,7 @@ const Header = () => {
               <a href="#">연말정산 가이드</a>
               <ul>
                 <li style={{ boxSizing: "border-box", paddingTop: 10 }}>
-                  <a href="#" onClick={handleOpen}>
+                  <a href="#" onClick={(e) => handleOpen("1")}>
                     연말정산 제출서류 안내
                   </a>
                 </li>
@@ -234,13 +238,13 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="#" onClick={(e) => handleOpen("2")}>
                     국세청 간소화 <br />
                     서비스 유의사항
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="#" onClick={(e) => handleOpen("3")}>
                     연간 소득금액
                     <br /> 100만원 이하 요건
                   </a>
@@ -298,14 +302,14 @@ const Header = () => {
           </nav>
         </div>
       </header>
+      {console.log("modal" + modal)}
       <Modal
         open={open}
         onClose={handleClose}
         // aria-labelledby="simple-modal-title"
         // aria-describedby="simple-modal-description"
       >
-        {/* {body} */}
-        <DocumentInfo />
+        {modal === "1" ? <DocumentInfo /> : <Test />}
       </Modal>
     </div>
   );

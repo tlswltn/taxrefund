@@ -23,7 +23,8 @@ const DocumentInfo = () => {
       border: "1px solid gray",
       borderCollapse: "collapse",
       cellpadding: 0,
-      // textAlign: "center",
+      textAlign: "center",
+      verticalAlign: "center",
       backgroundColor: "white",
       "& thead": {
         fontSize: 16,
@@ -53,15 +54,19 @@ const DocumentInfo = () => {
       <br />- 출력 후 제출 필수
       <table className={classes.table}>
         <colgroup>
-          <col style={{ backgroundColor: "#F5F5F5", textAlign: "center" }} />
+          <col
+            style={{
+              backgroundColor: "#F5F5F5",
+            }}
+          />
           <col />
-          <col style={{ textAlign: "center" }} />
+          <col />
         </colgroup>
         <thead>
           <tr>
-            <td style={{ width: "20%" }}>항목</td>
-            <td style={{ width: "60%" }}>소득공제 영수증 내용</td>
-            <td style={{ width: "20%" }}>발급처</td>
+            <td style={{ width: "32%" }}>항목</td>
+            <td style={{ width: "48%" }}>소득공제 영수증 내용</td>
+            <td style={{ width: "30%" }}>발급처</td>
           </tr>
         </thead>
         <tr>
@@ -142,6 +147,7 @@ const DocumentInfo = () => {
           <td> 우리사주조합</td>
         </tr>
       </table>
+      <br />
       <span>[국세청 간소화 서비스 홈페이지 ] 소득공제자료 조회방법</span>
       <br />
       1. 인터넷 주소창에 www.hometax.go.kr을 직접 입력하고 접속한다.
@@ -238,6 +244,7 @@ const DocumentInfo = () => {
           <td>O</td>
         </tr>
       </table>
+      <br />
     </div>
   );
 };
