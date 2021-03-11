@@ -6,17 +6,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const Step2 = () => {
   const useStyles = makeStyles({
-    // title: {
-    //   // width: "100%",
-    //   height: 200,
-    //   textAlign: "center",
-    //   fontSize: 20,
-    //   lineHeight: 10,
-    //   fontWeight: "bold",
-    //   // margin: "0 auto",
-    //   // verticalAlign: "middle",
-    //   // border: "solid 1px black",
-    // },
     title: {
       // width: "100%",
       height: 200,
@@ -24,9 +13,7 @@ const Step2 = () => {
       fontSize: 24,
       lineHeight: 8,
       fontWeight: "bold",
-      // margin: "0 auto",
-      // display: "table",
-      // verticalAlign: "middle",
+
       boxSizing: "boxSizing",
       // paddingTop: 100,
       // border: "solid 1px black",

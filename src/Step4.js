@@ -3,6 +3,7 @@ import cam from "./images/pd_taxRefund_faq_icon01.jpg";
 import what from "./images/pd_taxRefund_faq_icon02.jpg";
 
 import faq from "./images/faqinfo.png";
+import videoinfo1 from "./images/videoinfo1.png";
 
 import out1 from "./images/pd_taxRefund_service_icon01_out.jpg";
 import out2 from "./images/pd_taxRefund_service_icon02_out.jpg";
@@ -55,35 +56,26 @@ const Step4 = () => {
       fontWeight: "bold",
       boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.25)",
       borderRadius: 20,
+      cursor: "pointer",
       " &:hover ": {
-        // backgroundColor: "#F39800",
-        // color: "#FFFFFF",
-        backgroundImage: `url(${faq})`,
+        content: `url(${videoinfo1})`,
       },
     },
-    bigbtnover: {
+    bigbtnout2: {
       width: 450,
       height: 200,
       display: "flex",
       flexDirection: "column",
-      // alignItems: "center",
-      // justifyContent: "center",
+      alignItems: "center",
+      justifyContent: "center",
       border: "2px solid #EDEDED",
+      fontWeight: "bold",
       boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.25)",
       borderRadius: 20,
-      backgroundColor: "#F39800",
-      color: "#FFFFFF",
-      " & p ": {
-        fontSize: "24",
-        fontWeight: "bold",
+      " &:hover ": {
+        content: `url(${faq})`,
+        cursor: "pointer",
       },
-      " & span ": {
-        fontSize: "18",
-        // fontWeight: "bold",
-      },
-      paddingLeft: 45,
-      paddingTop: 10,
-      boxSizing: "border-box",
     },
 
     btn4box: {
@@ -166,7 +158,7 @@ const Step4 = () => {
           <div className={classes.bigbtnout}>
             {/* {test ? ( */}
 
-            <img src={cam} style={{ width: 60, height: 60 }} />
+            <img src={cam} style={{ width: 60, height: 60 }} alt="cam" />
             <span style={{ paddingTop: 5 }}>연말정산 동영상 설명서</span>
 
             {/* ) : (
@@ -174,8 +166,8 @@ const Step4 = () => {
             )} */}
           </div>
 
-          <div className={classes.bigbtnout}>
-            <img src={what} style={{ width: 60, height: 60 }} />
+          <div className={classes.bigbtnout2}>
+            <img src={what} style={{ width: 60, height: 60 }} alt="what" />
             <span style={{ paddingTop: 5 }}>연말정산 질문틀 - FAQ</span>
           </div>
 

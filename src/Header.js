@@ -1,29 +1,29 @@
 import logo from "./images/pd_common_logo.gif";
 import taxlogo from "./images/pd_taxRefund_logo.gif";
-import pig from "./images/pd_taxRefund_mainImg.png";
+import React from "react";
 import sns1 from "./images/pd_common_snsnav01.png";
 import sns2 from "./images/pd_common_snsnav02.png";
 import sns3 from "./images/pd_common_snsnav03.png";
-import Button from "@material-ui/core/Button";
-import Step2 from "./Step2";
-import Step3 from "./Step3";
-import Step4 from "./Step4";
+
+import Modal from "@material-ui/core/Modal";
+import DocumentInfo from "./DocumentInfo";
 
 import { makeStyles } from "@material-ui/core/styles";
 
 const Header = () => {
   const useStyles = makeStyles({
     header: {
-      //   position: "fixed",
+      // position: "fixed",
       height: 120,
       width: "100%",
+      // borderBottom: "1px solid #ddd",
     },
     logotitle: {
       width: "100%",
       height: 60,
       display: "flex",
       alignItems: "center",
-      // backgroundColor: "lightcoral",
+      backgroundColor: "#FFFFFF",
     },
     logobox: {
       margin: "0 auto",
@@ -52,113 +52,139 @@ const Header = () => {
     mnav: {
       marginLeft: 500,
       boxSizing: "border-box",
-      // width: "100%",
-
-      // marginLeft: "auto",
-      // marginRight: "auto",
       height: 60,
       backgroundColor: "#F5F5F5",
-      // display: "inline-block",
-
-      // alignItems: "center",
-      // margin: "0 auto",
-      //   marginLeft: 200,
-      // textAlign: "center",
     },
     snsnav: {
       //   display: "flex",
       width: "12%",
       height: 60,
       display: "inline-block",
-      //   verticalAlign: "middle",
-      // alignItems: "center",
-      //   paddingTop: 0,
-      //   verticalAlign: "top",
-
-      //   marginLeft: 200,
     },
     menuli: {
       //   width: "auto",
       height: 60,
-
-      width: "16%",
+      width: "14%",
       textAlign: "center",
-      // lineHeight: 0,
-      // float: "left",
       display: "inline-block",
-      // align: "center",
-      // alignItems: "center",
-      // justifyContent: "center",
-      // verticalAlign: "bottom",
-      paddingTop: 15,
+      paddingTop: 18,
       fontWeight: 700,
       cursor: "pointer",
       listStyle: "none",
       // margin: "0 auto",
+      " & a ": {
+        color: "black",
+        textDecoration: "none",
+        // "&:hover": {
+        //   color: "red",
+        // },
+      },
+      " &:hover ul": {
+        //큰메뉴 호버시
+        // "& ul": {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        // justifyItems: "center",
+        fontWeight: "normal",
+        padding: 0,
+        // },
+        // color: "red",
+        // backgroundColor: "#FFA714",
+        // backgroundColor: "#FFFFFF",
+
+        "& a": {
+          color: "black",
+          textAlign: "center",
+          fontSize: 13,
+          // lineHeight: "px",
+        },
+      },
+      "& ul": {
+        position: "relative",
+        backgroundColor: "#FFFFFF",
+        display: "none",
+        listStyle: "none",
+        float: "left",
+        width: 166,
+        height: 200,
+
+        border: "1px solid #ddd",
+        // margin: 0,
+        // padding: 0,
+
+        "& li": {
+          // position: "absolute",
+          // border: "1px solid black",
+          listStyle: "none",
+          float: "left",
+          width: 166,
+          height: 50,
+          margin: 0,
+          padding: 0,
+          display: "block",
+          borderBottom: "0.5px solid #ddd",
+          // verticalAlign: "middle",
+          "&:hover": {
+            backgroundColor: "#FFA714",
+            // color: "white",
+            "& a": {
+              // padding: "0px 10px 0px 15px",
+              color: "white",
+              fontWeight: "bold",
+            },
+          },
+        },
+        "& a": {
+          color: "#FFFFFF",
+          textAlign: "center",
+          fontSize: 13,
+          // lineHeight: "19px",
+        },
+      },
     },
-    step1: {
+
+    snsbox: {
+      // border: "1px solid black",
+      width: 130,
+      height: 30,
       display: "flex",
 
-      alignItems: "center",
-      // justifyContent: "space-evenly",
-      // margin: "0 auto",
-      height: "100vh",
-      width: "100%",
-      backgroundColor: "#FFF9E3",
-    },
-    box1: {
-      // display: "inline-block",
-      // float: "left",
-      width: "1000px",
-      margin: "0 auto",
-      // backgroundColor: "skyblue",
-    },
-    step1Left: {
-      float: "left",
-      paddingTop: 100,
-      // paddingLeft: 40,
-      // marg
-      // margin: "0 auto",
-      // marginLeft: 500,
-      marginLeft: 25,
-      boxSizing: "boxSizing",
-      width: 380,
-      height: 286,
-      // border: "solid 1px black",
-    },
-    step1Right: {
-      // float: "left",
-      // margin: 0,
-      marginRight: 3,
-      // width: 400,
-      // height: 286,
-      // border: "solid 1px black",
-    },
-    btn: {
-      backgroundColor: "#F39800",
-      border: 1,
-      borderRadius: 10,
-      height: 50,
-      color: "#FFFFFF",
-      bottom: 0,
-    },
-    snsbox: {
-      // width: 0,
-      height: 45,
-      display: "flex",
-      // float: "right",
-      // display: "inline",
-      // maginLeft: 20,
-      // alignItems: "flex-end",
       justifyContent: "space-between",
-      // marginTop: 20,
-      paddingTop: 10,
-      boxSizing: "border-box",
-      ".img": { width: 20, height: 10 },
+      marginTop: 14,
+      // paddingTop: 10,
+      // boxSizing: "border-box",
+      "& img": { width: 30, height: 30 },
+    },
+    paper: {
+      position: "absolute",
+      width: 600,
+      // height: "auto",
+      // backgroundColor: theme.palette.background.paper,
+      border: "2px solid #000",
+      // boxShadow: theme.shadows[5],
+      // padding: theme.spacing(2, 4, 3),
     },
   });
-
   const classes = useStyles();
+  const body = (
+    <div className={classes.paper}>
+      <h2 id="simple-modal-title">Text in a modal</h2>
+      <p id="simple-modal-description">
+        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+      </p>
+      {/* <SimpleModal /> */}
+    </div>
+  );
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <div>
       <header className={classes.header}>
@@ -173,7 +199,7 @@ const Header = () => {
           </div>
         </div>
         <div className={classes.headbar}>
-          <div className={classes.menubar}>
+          <nav className={classes.menubar}>
             {/* <nav className={classes.mnav}> */}
             {/* <ul style="none"> */}
             {/* <ul> */}
@@ -191,9 +217,42 @@ const Header = () => {
                 // align="center"
               />
             </div>
-            <li className={classes.menuli}>연말정산 가이드</li>
-            <li className={classes.menuli}>근로소득 영수증발급</li>
-            <li className={classes.menuli}>서비스 문의하기</li>
+            <li className={classes.menuli}>
+              <a href="#">연말정산 가이드</a>
+              <ul>
+                <li style={{ boxSizing: "border-box", paddingTop: 10 }}>
+                  <a href="#" onClick={handleOpen}>
+                    연말정산 제출서류 안내
+                  </a>
+                </li>
+                <li style={{ boxSizing: "border-box", paddingTop: 10 }}>
+                  <a
+                    href="https://www.youtube.com/watch?v=XvqiVomcsr4"
+                    target="_blank"
+                  >
+                    국세청 PDF 다운로드 방법
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    국세청 간소화 <br />
+                    서비스 유의사항
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    연간 소득금액
+                    <br /> 100만원 이하 요건
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li className={classes.menuli}>
+              <a href="#">근로소득 영수증발급</a>
+            </li>
+            <li className={classes.menuli}>
+              <a href="#">서비스 문의하기</a>
+            </li>
             {/* <li className={classes.menuli}> */}
 
             {/* </li> */}
@@ -214,43 +273,40 @@ const Header = () => {
             </ul>
           </nav> */}
             <div className={classes.snsbox}>
-              <img src={sns1} alt="sns1" /> <img src={sns2} alt="sns2" />{" "}
-              <img src={sns3} alt="sns3" />
+              <a
+                href="https://www.youtube.com/channel/UCdR2xKktD4R008_-FDO7SEQ/featured"
+                title="월급날 tv 바로가기"
+                target="_blank"
+              >
+                <img src={sns1} alt="sns1" />
+              </a>{" "}
+              <a
+                href="https://blog.naver.com/payday_2000"
+                target="_blank"
+                title="월급날 블로그 바로가기"
+              >
+                <img src={sns2} alt="sns2" />
+              </a>{" "}
+              <a
+                href="https://www.today-payday.com/"
+                title="월급날 뉴스레터 바로가기"
+                target="_blank"
+              >
+                <img src={sns3} alt="sns3" />
+              </a>
             </div>
-          </div>
+          </nav>
         </div>
       </header>
-
-      <div className={classes.step1}>
-        <div className={classes.box1}>
-          <div className={classes.step1Left}>
-            <span style={{ fontSize: 40, fontWeight: "bold" }}>
-              안전하고 편리한
-              <br /> <span style={{ color: "#F39800" }}>연말정산</span>을
-              시작합니다
-            </span>
-            <p>
-              막막하기만한 연말정산
-              <br /> 이제 든든한 월급날과 함께 시작하세요!
-            </p>
-            <br />
-
-            <Button className={classes.btn}>연말정산 START</Button>
-          </div>
-          <div className={classes.step1Right}>
-            {" "}
-            <img
-              src={pig}
-              // className={classes.logobox}
-              alt="logo"
-              // align="center"
-            />
-          </div>
-        </div>
-      </div>
-      <Step2 />
-      <Step3 />
-      <Step4 />
+      <Modal
+        open={open}
+        onClose={handleClose}
+        // aria-labelledby="simple-modal-title"
+        // aria-describedby="simple-modal-description"
+      >
+        {/* {body} */}
+        <DocumentInfo />
+      </Modal>
     </div>
   );
 };

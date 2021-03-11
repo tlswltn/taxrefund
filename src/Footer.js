@@ -3,19 +3,46 @@ import { makeStyles } from "@material-ui/core/styles";
 const Footer = () => {
   const useStyles = makeStyles({
     footer: {
+      // display: "block",
       fontSize: 14,
       width: "100%",
-      height: 100,
+      height: 300,
       textAlign: "center",
       marigin: "auto",
       backgroundColor: "#333333",
       color: "#FFFFFF",
     },
-    add: {
-      width: "100%",
+    footerWrap: {
+      width: 1000,
+      height: "100%",
+      margin: "0 auto",
+      " & .footerTop": {
+        width: "100%",
+        height: 100,
+        paddingTop: 40,
+        boxSizing: "border-box",
+        borderBottom: "1px solid #fff",
+        " & ul": {
+          width: 700,
+          height: 20,
+          margin: "0 auto",
+          " &li": {
+            // display: "flex",
+            float: "left",
+            padding: "0 20px",
+            borderRight: "1px solid #fff",
+            // color: "red",
+            cursor: "pointer",
+            listStyle: "none",
+            fontSize: 14,
 
-      paddingTop: 25,
-      boxSizing: "border-box",
+            // backgroundColor: "yellow",
+          },
+        },
+      },
+
+      // paddingTop: 25,
+      // boxSizing: "border-box",
     },
   });
 
@@ -23,10 +50,20 @@ const Footer = () => {
   return (
     <div>
       <footer className={classes.footer}>
-        <div className={classes.add}>
-          220-81-99881 | (주)월급날 | 대표자:임호천 | 02-785-0642 | 서울시
+        <div className={classes.footerWrap}>
+          {/* 220-81-99881 | (주)월급날 | 대표자:임호천 | 02-785-0642 | 서울시
           영등포구 국회대로 68길 18 (여의도동, 금영빌딩)10층 <br />ⓒ 2016 payday
-          co., Ltd. All Rights Reserved.
+          co., Ltd. All Rights Reserved. */}
+          <div className={classes.footerTop}>
+            <ul>
+              <li>개인정보 처리방침</li>
+              <li>이메일주소 무단수집거부</li>
+              <li>마케팅 제휴문의</li>
+              <li>찾아오시는 길</li>
+              <li>월급날 소개</li>
+            </ul>
+          </div>
+          <div className={classes.footerBottom}></div>
         </div>
       </footer>
     </div>
