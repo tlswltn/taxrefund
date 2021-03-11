@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 //연말정산 서류안내
-const DocumentInfo = () => {
+const TaxNotice = () => {
   const useStyles = makeStyles({
     box: {
       margin: "0 auto",
@@ -20,8 +20,7 @@ const DocumentInfo = () => {
       //   height: 791,
       fontSize: 13,
       tableLayout: "fixed",
-      borderTop: "1px solid #666666",
-      borderBottom: "2px solid #666666",
+      border: "1px solid gray",
       borderCollapse: "collapse",
       cellpadding: 0,
       textAlign: "center",
@@ -30,24 +29,21 @@ const DocumentInfo = () => {
       "& thead": {
         fontSize: 16,
         fontWeight: "bold",
-        borderBottom: "1px solid #666666",
         backgroundColor: "#F5F5F5",
       },
       "& td": {
         // borderCollapse: "collapse",
-        borderBottom: "1px solid #CCCCCC",
+        borderBottom: "1px solid gray",
       },
       "& tr": {
         height: 50,
       },
     },
     txtbox: {
+      border: "1px solid black",
       backgroundColor: "#F5F5F5",
       width: 568,
       height: 88,
-      // display: "flex",
-      padding: 10,
-      boxSizing: "border-box",
     },
   });
 
@@ -58,8 +54,7 @@ const DocumentInfo = () => {
       <p>연말정산 제출서류 안내</p>
       <hr />
       국세청 간소화 서비스에서 제공하지 않은 연말정산 소득공제 증명서류
-      <br />
-      <b>- 출력 후 제출 필수</b>
+      <br />- 출력 후 제출 필수
       <table className={classes.table}>
         <colgroup>
           <col
@@ -169,7 +164,8 @@ const DocumentInfo = () => {
         인증서(GPKI)’
         <br />③ ’휴대폰에 저장된 공인인증서’
       </div>
-      <p>3. 소득공제자료 조회하기</p>
+      3. 소득공제자료 조회하기
+      <br />
       <span>
         국세청 간소화 서비스 홈페이지에서 제공하는 증명서류
         <br /> (종이없는 연말정산 PDF 파일 전산업로드용)
@@ -265,4 +261,4 @@ const DocumentInfo = () => {
   );
 };
 
-export default DocumentInfo;
+export default TaxNotice;

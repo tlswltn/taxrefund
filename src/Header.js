@@ -7,6 +7,7 @@ import sns3 from "./images/pd_common_snsnav03.png";
 
 import Modal from "@material-ui/core/Modal";
 import DocumentInfo from "./DocumentInfo";
+import TaxNotice from "./TaxNotice";
 import Test from "./Test";
 
 import { makeStyles } from "@material-ui/core/styles";

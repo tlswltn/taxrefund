@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const Test = () => {
   const useStyles = makeStyles({
     box: {
+      margin: "0 auto",
       width: 600,
       height: "100%",
       backgroundColor: "white",
@@ -44,7 +45,7 @@ const Test = () => {
 
   return (
     <>
-      <div>
+      <div className={classes.box}>
         <table className={classes.table}>
           <thead>
             <tr>
