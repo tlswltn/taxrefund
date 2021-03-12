@@ -1,6 +1,7 @@
 // import logo from "./images/pd_common_logo.gif";
 import hometaxlogo from "./images/pd_taxRefund_hometaxLogo.jpg";
 import arrow from "./images/arrow.jpg";
+import greenicon from "./images/icon.jpg";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -164,7 +165,13 @@ const Step2 = () => {
               <br /> 연말정산 간소화 서비스로 이동하기
             </span>
             <br />
-            <span style={{ color: "#2B9460", paddingLeft: 60 }}>이동하기</span>
+
+            <a href="#">
+              <span style={{ color: "#2B9460", paddingLeft: 60 }}>
+                <img src={greenicon} />
+                이동하기
+              </span>
+            </a>
           </div>
         </div>
       </div>

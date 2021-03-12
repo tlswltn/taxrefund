@@ -9,6 +9,7 @@ import Modal from "@material-ui/core/Modal";
 import DocumentInfo from "./DocumentInfo";
 import TaxNotice from "./TaxNotice";
 import Test from "./Test";
+import ModalFooter from "./ModalFooter";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -159,7 +160,8 @@ const Header = () => {
       "& img": { width: 30, height: 30 },
     },
     paper: {
-      position: "absolute",
+      // position: "absolute",
+      margin: "0 auto",
       width: 600,
       // height: "auto",
       // backgroundColor: theme.palette.background.paper,
@@ -169,15 +171,7 @@ const Header = () => {
     },
   });
   const classes = useStyles();
-  // const body = (
-  //   <div className={classes.paper}>
-  //     <h2 id="simple-modal-title">Text in a modal</h2>
-  //     <p id="simple-modal-description">
-  //       Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-  //     </p>
-  //     {/* <SimpleModal /> */}
-  //   </div>
-  // );
+
   const [open, setOpen] = React.useState(false);
   const [modal, setModal] = React.useState(0);
 
@@ -190,6 +184,48 @@ const Header = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const body = (
+    // <div>
+    /* <TaxNotice /> */
+    // <div style={{ overflowY: "auto" }}>
+    <>
+      {" "}
+      {/* {modal === "1" ? <DocumentInfo /> : <Test /> } */}
+      {modal === "1" ? (
+        <DocumentInfo />
+      ) : modal === "2" ? (
+        <TaxNotice />
+      ) : (
+        <Test />
+      )}
+      {<ModalFooter />}
+    </>
+    // </div>
+
+    //  {/* { <DocumentInfo /> } */}
+    // {/* <h2 id="simple-modal-title">Text in a modal</h2>
+    // <p id="simple-modal-description">
+    //   Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+    // </p> */}
+    // {/* <SimpleModal /> */}
+    // {/* <ModalFooter /> */}
+  );
+
+  // const body = (
+  //   // <div>
+  //   /* <TaxNotice /> */
+  //   <div>{modal === "1" ? <DocumentInfo /> : <Test />}</div>
+
+  //   //  {/* { <DocumentInfo /> } */}
+  //   // {/* <h2 id="simple-modal-title">Text in a modal</h2>
+  //   // <p id="simple-modal-description">
+  //   //   Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+  //   // </p> */}
+  //   // {/* <SimpleModal /> */}
+  //   // {/* <ModalFooter /> */}
+  // );
+
   return (
     <div>
       <header className={classes.header}>
@@ -225,10 +261,11 @@ const Header = () => {
             <li className={classes.menuli}>
               <a href="#">연말정산 가이드</a>
               <ul>
-                <li style={{ boxSizing: "border-box", paddingTop: 10 }}>
-                  <a href="#" onClick={(e) => handleOpen("1")}>
-                    연말정산 제출서류 안내
-                  </a>
+                <li
+                  style={{ boxSizing: "border-box", paddingTop: 10 }}
+                  onClick={(e) => handleOpen("1")}
+                >
+                  <a href="#">연말정산 제출서류 안내</a>
                 </li>
                 <li style={{ boxSizing: "border-box", paddingTop: 10 }}>
                   <a
@@ -238,14 +275,14 @@ const Header = () => {
                     국세청 PDF 다운로드 방법
                   </a>
                 </li>
-                <li>
-                  <a href="#" onClick={(e) => handleOpen("2")}>
+                <li onClick={(e) => handleOpen("2")}>
+                  <a href="#">
                     국세청 간소화 <br />
                     서비스 유의사항
                   </a>
                 </li>
-                <li>
-                  <a href="#" onClick={(e) => handleOpen("3")}>
+                <li onClick={(e) => handleOpen("3")}>
+                  <a href="#">
                     연간 소득금액
                     <br /> 100만원 이하 요건
                   </a>
@@ -307,10 +344,12 @@ const Header = () => {
       <Modal
         open={open}
         onClose={handleClose}
+
         // aria-labelledby="simple-modal-title"
         // aria-describedby="simple-modal-description"
       >
-        {modal === "1" ? <DocumentInfo /> : <Test />}
+        {/* {modal === "1" ? <DocumentInfo /> : <Test />} */}
+        {body}
       </Modal>
     </div>
   );
