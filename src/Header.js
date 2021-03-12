@@ -8,7 +8,7 @@ import sns3 from "./images/pd_common_snsnav03.png";
 import Modal from "@material-ui/core/Modal";
 import DocumentInfo from "./DocumentInfo";
 import TaxNotice from "./TaxNotice";
-import Test from "./Test";
+import YearIncome from "./YearIncome";
 import ModalFooter from "./ModalFooter";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -197,7 +197,7 @@ const Header = () => {
       ) : modal === "2" ? (
         <TaxNotice />
       ) : (
-        <Test />
+        <YearIncome />
       )}
       {<ModalFooter />}
     </>

@@ -6,7 +6,7 @@ import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Step4 from "./Step4";
 import DocumentInfo from "./DocumentInfo";
-import Test from "./Test";
+import Test from "./YearIncome";
 
 // import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";

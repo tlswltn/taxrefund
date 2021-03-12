@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 //연간소득금액 100만원 이하
-const Test = () => {
+const YearIncome = () => {
   const useStyles = makeStyles({
     box: {
       position: "relative",
@@ -164,4 +164,4 @@ const Test = () => {
     </>
   );
 };
-export default Test;
+export default YearIncome;
