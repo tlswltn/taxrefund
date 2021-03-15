@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles";
-import ModalFooter from "./ModalFooter";
 
 //연말정산 서류안내
 const DocumentInfo = () => {

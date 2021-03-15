@@ -31,7 +31,6 @@ const Step3 = () => {
       height: 500,
 
       " & span ": {
-        // textAlign: "center",
         paddingLeft: 100,
         fontSize: 18,
       },
@@ -53,7 +52,6 @@ const Step3 = () => {
               fontSize: 28,
               fontWeight: 700,
               paddingTop: 150,
-
               paddingLeft: 100,
             }}
           >

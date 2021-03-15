@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-import hi from "../images/hi.PNG";
+import next from "../images/hi.PNG";
 
 //국세청 간소화 서비스 유의사항
 const TaxNotice = () => {
@@ -9,7 +9,7 @@ const TaxNotice = () => {
       fontSize: 14,
       borderTopLeftRadius: "5px",
       borderTopRightRadius: "5px",
-      // borderRadius: "5px",
+
       margin: "0 auto",
       width: 600,
       height: "95%",
@@ -113,13 +113,25 @@ const TaxNotice = () => {
             <br />
             접속
           </div>
-          <img src={hi} width="20px" height="20px" style={{ paddingTop: 60 }} />
+          <img
+            src={next}
+            width="20px"
+            height="20px"
+            style={{ paddingTop: 60 }}
+            alt="next"
+          />
           <div className={classes.divCircle}>
             소득공제 자료
             <br />
             제공 동의
           </div>
-          <img src={hi} width="20px" height="20px" style={{ paddingTop: 60 }} />
+          <img
+            src={next}
+            width="20px"
+            height="20px"
+            style={{ paddingTop: 60 }}
+            alt="next"
+          />
           <div className={classes.divCircle}>
             동의 방법 선택 후<br /> 신청 정보 입력
           </div>

@@ -7,7 +7,6 @@ const YearIncome = () => {
       position: "relative",
       borderTopLeftRadius: "5px",
       borderTopRightRadius: "5px",
-      // borderRadius: "5px",
       margin: "0 auto",
       width: 600,
       height: "95%",
@@ -21,7 +20,6 @@ const YearIncome = () => {
       width: 600,
       height: 64,
       fontSize: 20,
-      // verticalAlign: "center",
       padding: 20,
       boxSizing: "border-box",
       borderBottom: "1px solid lightgray",
@@ -35,7 +33,6 @@ const YearIncome = () => {
     table: {
       width: 560,
       height: 500,
-
       fontSize: 12,
 
       borderTop: "1px solid #666666",

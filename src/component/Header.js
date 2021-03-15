@@ -46,7 +46,6 @@ const Header = () => {
     },
 
     menuli: {
-      // width: "auto",
       width: "15%",
       textAlign: "center",
       display: "inline-block",
@@ -150,30 +149,14 @@ const Header = () => {
     setOpen(false);
   };
 
-  const body = (
+  const modalbody = (
     <>
       {modal === "1" ? (
-        <>
-          <DocumentInfo />
-
-          <div className={classes.mfooter}>
-            <p onClick={handleClose}>확인</p>
-          </div>
-        </>
+        <DocumentInfo />
       ) : modal === "2" ? (
-        <>
-          <TaxNotice />
-          <div className={classes.mfooter}>
-            <p onClick={handleClose}>확인</p>
-          </div>
-        </>
+        <TaxNotice />
       ) : (
-        <>
-          <YearIncome />{" "}
-          <div className={classes.mfooter}>
-            <p onClick={handleClose}>확인</p>
-          </div>
-        </>
+        <YearIncome />
       )}
     </>
   );
@@ -206,7 +189,7 @@ const Header = () => {
                   style={{ boxSizing: "border-box", paddingTop: 10 }}
                   onClick={(e) => handleOpen("1")}
                 >
-                  <a href="#">연말정산 제출서류 안내</a>
+                  <a>연말정산 제출서류 안내</a>
                 </li>
                 <li style={{ boxSizing: "border-box", paddingTop: 10 }}>
                   <a
@@ -218,13 +201,13 @@ const Header = () => {
                   </a>
                 </li>
                 <li onClick={(e) => handleOpen("2")}>
-                  <a href="#">
+                  <a>
                     국세청 간소화 <br />
                     서비스 유의사항
                   </a>
                 </li>
                 <li onClick={(e) => handleOpen("3")}>
-                  <a href="#">
+                  <a>
                     연간 소득금액
                     <br /> 100만원 이하 요건
                   </a>
@@ -269,7 +252,12 @@ const Header = () => {
       </header>
       {console.log("modal" + modal)}
       <Modal open={open} onClose={handleClose}>
-        {body}
+        <>
+          {modalbody}
+          <div className={classes.mfooter}>
+            <p onClick={handleClose}>확인</p>
+          </div>
+        </>
       </Modal>
     </div>
   );
