@@ -164,8 +164,6 @@ const Step2 = () => {
                   color: "#2B9460",
                   verticalAlign: "top",
                   paddingLeft: 10,
-
-                  // lineHeight: 2,
                 }}
               >
                 이동하기

@@ -56,7 +56,7 @@ const Header = () => {
       listStyle: "none",
 
       " & a ": {
-        color: "black",
+        color: "#333333",
         textDecoration: "none",
       },
       " &:hover ul": {
@@ -152,10 +152,10 @@ const Header = () => {
 
   const body = (
     <>
-      {" "}
       {modal === "1" ? (
         <>
           <DocumentInfo />
+
           <div className={classes.mfooter}>
             <p onClick={handleClose}>확인</p>
           </div>
@@ -177,20 +177,6 @@ const Header = () => {
       )}
     </>
   );
-
-  // const body = (
-  //   // <div>
-  //   /* <TaxNotice /> */
-  //   <div>{modal === "1" ? <DocumentInfo /> : <Test />}</div>
-
-  //   //  {/* { <DocumentInfo /> } */}
-  //   // {/* <h2 id="simple-modal-title">Text in a modal</h2>
-  //   // <p id="simple-modal-description">
-  //   //   Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-  //   // </p> */}
-  //   // {/* <SimpleModal /> */}
-  //   // {/* <ModalFooter /> */}
-  // );
 
   return (
     <div>

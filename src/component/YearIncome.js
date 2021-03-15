@@ -35,9 +35,9 @@ const YearIncome = () => {
     table: {
       width: 560,
       height: 500,
-      padding: 10,
+
       fontSize: 12,
-      // tableLayout: "fixed",
+
       borderTop: "1px solid #666666",
       borderBottom: "1px solid #666666",
       borderCollapse: "collapse",
@@ -51,8 +51,7 @@ const YearIncome = () => {
         borderBottom: "1px solid #666666",
       },
       "& td": {
-        // borderCollapse: "collpase",
-        padding: 8,
+        padding: "3px 12px",
         borderBottom: "1px solid #CCCCCC",
       },
     },
@@ -73,10 +72,10 @@ const YearIncome = () => {
               <col />
             </colgroup>
             <thead style={{ textAlign: "center" }}>
-              <tr height="25">
+              <tr>
                 <td
                   rowSpan="2"
-                  width="18%"
+                  width="15%"
                   style={{
                     textAlign: "center",
                     borderBottom: "1px solid #666666",
@@ -88,7 +87,7 @@ const YearIncome = () => {
                   소득금액요건 판단 (연간소득금액이 100만원 이하)
                 </td>
               </tr>
-              <tr height="25">
+              <tr>
                 <td style={{ borderBottom: "1px solid #666666" }}>
                   소득금액요건을 충족한 경우
                 </td>
