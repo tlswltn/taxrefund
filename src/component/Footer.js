@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 const Footer = () => {
   const useStyles = makeStyles({
     footer: {
-      // display: "block",
       fontSize: 14,
       width: "100%",
       height: 300,
@@ -18,42 +17,31 @@ const Footer = () => {
       margin: "0 auto",
     },
     footerTop: {
-      // width: "100%",
       height: 100,
       paddingTop: 40,
       boxSizing: "border-box",
       borderBottom: "1px solid #fff",
       display: "flex",
-      // flexDirection: "row",
+
       "& ul": {
         width: 700,
         height: 20,
         margin: "0 auto",
         listStyle: "none",
-        // color: "red",
-        // dis
       },
       "& li": {
-        // display: "flex",
         float: "left",
         padding: "0 20px",
         borderRight: "1px solid #fff",
-        // color: "red",
         cursor: "pointer",
         listStyle: "none",
         fontSize: 14,
-
-        // backgroundColor: "yellow",
       },
     },
     footerBottom: {
       paddingTop: 80,
       boxSizing: "border-box",
     },
-
-    // paddingTop: 25,
-    // boxSizing: "border-box",
-    // },
   });
 
   const classes = useStyles();

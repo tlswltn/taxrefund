@@ -1,23 +1,19 @@
 // import logo from "./images/pd_common_logo.gif";
-import hometaxlogo from "./images/pd_taxRefund_hometaxLogo.jpg";
-import arrow from "./images/arrow.jpg";
-import greenicon from "./images/icon.jpg";
+import hometaxlogo from "../images/pd_taxRefund_hometaxLogo.jpg";
+import arrow from "../images/arrow.jpg";
+import greenicon from "../images/icon.jpg";
 
 import { makeStyles } from "@material-ui/core/styles";
 
 const Step2 = () => {
   const useStyles = makeStyles({
     title: {
-      // width: "100%",
       height: 200,
       textAlign: "center",
       fontSize: 24,
       lineHeight: 8,
       fontWeight: "bold",
-
       boxSizing: "boxSizing",
-      // paddingTop: 100,
-      // border: "solid 1px black",
     },
     stepbox: {
       width: 1000,
@@ -34,8 +30,6 @@ const Step2 = () => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-
-      // alignContent: "center",
       border: "1px solid #EDEDED",
       borderRadius: 70,
       boxShadow: "2px 5px 10px rgba(0, 0, 0, 0.1);",
@@ -45,10 +39,6 @@ const Step2 = () => {
         backgroundColor: "#2B9460",
         color: "#FFFFFF",
       },
-
-      // marginLeft: "auto",
-      // marginRight: "auto",
-      // verticalAlign: "bottom",
     },
     content: {
       width: 1000,
@@ -59,30 +49,22 @@ const Step2 = () => {
       margin: "0 auto",
       width: 1000,
       height: 300,
-      // border: "solid 1px black",
     },
     tax1: {
-      // float: "left",
       width: 600,
       height: 300,
       " & span ": {
         fontSize: 18,
       },
-      // border: "solid 1px black",
     },
     tax2: {
-      // float: "right",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "baseline",
-      // alignItems: "center",
-      // justifyItems: "center",
-
       margin: 0,
       width: 400,
       height: 300,
-      // border: "1px solid red",
       boxShadow: "1px 4px 10px rgba(0, 0, 0, 0.15)",
       border: "1px solid #EDEDED",
       " & span ": {
@@ -92,7 +74,6 @@ const Step2 = () => {
     arrowstyle: {
       width: 35,
       height: 6,
-      // verticalAlign: "",
       paddingTop: 70,
     },
   });
@@ -166,9 +147,27 @@ const Step2 = () => {
             </span>
             <br />
 
-            <a href="#">
-              <span style={{ color: "#2B9460", paddingLeft: 60 }}>
-                <img src={greenicon} />
+            <a
+              href="https://www.hometax.go.kr/websquare/websquare.wq?w2xPath=/ui/pp/index_pp.xml"
+              target="_blank"
+              alt="간소화 바로가기"
+              style={{ textDecoration: "none", paddingLeft: 60 }}
+              rel="noopener noreferrer"
+            >
+              <img
+                src={greenicon}
+                style={{ verticalAlign: "middle" }}
+                alt="arrow"
+              />
+              <span
+                style={{
+                  color: "#2B9460",
+                  verticalAlign: "top",
+                  paddingLeft: 10,
+
+                  // lineHeight: 2,
+                }}
+              >
                 이동하기
               </span>
             </a>

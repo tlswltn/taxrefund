@@ -1,15 +1,14 @@
-import logo from "./images/pd_common_logo.gif";
-import taxlogo from "./images/pd_taxRefund_logo.gif";
+import logo from "../images/pd_common_logo.gif";
+import taxlogo from "../images/pd_taxRefund_logo.gif";
 import React from "react";
-import sns1 from "./images/pd_common_snsnav01.png";
-import sns2 from "./images/pd_common_snsnav02.png";
-import sns3 from "./images/pd_common_snsnav03.png";
+import sns1 from "../images/pd_common_snsnav01.png";
+import sns2 from "../images/pd_common_snsnav02.png";
+import sns3 from "../images/pd_common_snsnav03.png";
 
 import Modal from "@material-ui/core/Modal";
-import DocumentInfo from "./DocumentInfo";
-import TaxNotice from "./TaxNotice";
-import YearIncome from "./YearIncome";
-import ModalFooter from "./ModalFooter";
+import DocumentInfo from "../component/DocumentInfo";
+import TaxNotice from "../component/TaxNotice";
+import YearIncome from "../component/YearIncome";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -19,7 +18,6 @@ const Header = () => {
       // position: "fixed",
       height: 120,
       width: "100%",
-      // borderBottom: "1px solid #ddd",
     },
     logotitle: {
       width: "100%",
@@ -36,71 +34,44 @@ const Header = () => {
     },
     headbar: {
       width: "100%",
-      // float: "right",
-
       height: 60,
       backgroundColor: "#F5F5F5",
     },
     menubar: {
       display: "flex",
-      // alignItems: "center",
       justifyContent: "space-evenly",
-      width: "60%",
-      // width: 1900,
-      // display: "table",
+      width: "1000px",
       margin: "0 auto",
       height: 60,
-      // backgroundColor: "red",
     },
-    mnav: {
-      marginLeft: 500,
-      boxSizing: "border-box",
-      height: 60,
-      backgroundColor: "#F5F5F5",
-    },
-    snsnav: {
-      //   display: "flex",
-      width: "12%",
-      height: 60,
-      display: "inline-block",
-    },
+
     menuli: {
-      //   width: "auto",
-      height: 60,
-      width: "14%",
+      // width: "auto",
+      width: "15%",
       textAlign: "center",
       display: "inline-block",
       paddingTop: 18,
       fontWeight: 700,
       cursor: "pointer",
       listStyle: "none",
-      // margin: "0 auto",
+
       " & a ": {
         color: "black",
         textDecoration: "none",
-        // "&:hover": {
-        //   color: "red",
-        // },
       },
       " &:hover ul": {
         //큰메뉴 호버시
-        // "& ul": {
+
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        // justifyItems: "center",
         fontWeight: "normal",
         padding: 0,
-        // },
-        // color: "red",
-        // backgroundColor: "#FFA714",
-        // backgroundColor: "#FFFFFF",
 
         "& a": {
           color: "black",
           textAlign: "center",
           fontSize: 13,
-          // lineHeight: "px",
         },
       },
       "& ul": {
@@ -108,31 +79,21 @@ const Header = () => {
         backgroundColor: "#FFFFFF",
         display: "none",
         listStyle: "none",
-        float: "left",
-        width: 166,
+        width: 150,
         height: 200,
-
         border: "1px solid #ddd",
-        // margin: 0,
-        // padding: 0,
 
         "& li": {
-          // position: "absolute",
-          // border: "1px solid black",
           listStyle: "none",
-          float: "left",
-          width: 166,
+          width: 150,
           height: 50,
           margin: 0,
           padding: 0,
           display: "block",
           borderBottom: "0.5px solid #ddd",
-          // verticalAlign: "middle",
           "&:hover": {
             backgroundColor: "#FFA714",
-            // color: "white",
             "& a": {
-              // padding: "0px 10px 0px 15px",
               color: "white",
               fontWeight: "bold",
             },
@@ -142,32 +103,36 @@ const Header = () => {
           color: "#FFFFFF",
           textAlign: "center",
           fontSize: 13,
-          // lineHeight: "19px",
         },
       },
     },
 
     snsbox: {
-      // border: "1px solid black",
       width: 130,
       height: 30,
       display: "flex",
-
       justifyContent: "space-between",
       marginTop: 14,
-      // paddingTop: 10,
-      // boxSizing: "border-box",
       "& img": { width: 30, height: 30 },
     },
-    paper: {
-      // position: "absolute",
+
+    mfooter: {
       margin: "0 auto",
+      borderBottomRightRadius: "5px",
+      borderBottomLeftRadius: "5px",
       width: 600,
-      // height: "auto",
-      // backgroundColor: theme.palette.background.paper,
-      border: "2px solid #000",
-      // boxShadow: theme.shadows[5],
-      // padding: theme.spacing(2, 4, 3),
+      height: 44,
+      fontSize: 14,
+      textAlign: "right",
+      backgroundColor: "#FFFFFF",
+      borderTop: "1px solid #DDDDDD",
+      "& p": {
+        paddingRight: 20,
+        color: "#1976D2",
+        cursor: "pointer",
+        fontWeight: "bold",
+        fontSize: 14,
+      },
     },
   });
   const classes = useStyles();
@@ -186,30 +151,31 @@ const Header = () => {
   };
 
   const body = (
-    // <div>
-    /* <TaxNotice /> */
-    // <div style={{ overflowY: "auto" }}>
     <>
       {" "}
-      {/* {modal === "1" ? <DocumentInfo /> : <Test /> } */}
       {modal === "1" ? (
-        <DocumentInfo />
+        <>
+          <DocumentInfo />
+          <div className={classes.mfooter}>
+            <p onClick={handleClose}>확인</p>
+          </div>
+        </>
       ) : modal === "2" ? (
-        <TaxNotice />
+        <>
+          <TaxNotice />
+          <div className={classes.mfooter}>
+            <p onClick={handleClose}>확인</p>
+          </div>
+        </>
       ) : (
-        <YearIncome />
+        <>
+          <YearIncome />{" "}
+          <div className={classes.mfooter}>
+            <p onClick={handleClose}>확인</p>
+          </div>
+        </>
       )}
-      {<ModalFooter />}
     </>
-    // </div>
-
-    //  {/* { <DocumentInfo /> } */}
-    // {/* <h2 id="simple-modal-title">Text in a modal</h2>
-    // <p id="simple-modal-description">
-    //   Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-    // </p> */}
-    // {/* <SimpleModal /> */}
-    // {/* <ModalFooter /> */}
   );
 
   // const body = (
@@ -231,31 +197,20 @@ const Header = () => {
       <header className={classes.header}>
         <div className={classes.logotitle}>
           <div className={classes.logobox}>
-            <img
-              src={logo}
-              // className={classes.logobox}
-              alt="logo"
-              // align="center"
-            />
+            <img src={logo} alt="logo" />
           </div>
         </div>
         <div className={classes.headbar}>
           <nav className={classes.menubar}>
-            {/* <nav className={classes.mnav}> */}
-            {/* <ul style="none"> */}
-            {/* <ul> */}
             <div style={{ display: "inline", float: "left" }}>
               <img
                 src={taxlogo}
-                //   className={classes.logobox}
                 alt="logo"
                 style={{
                   paddingTop: 2,
                   marginTop: 20,
                   boxSizing: "border-box",
                 }}
-
-                // align="center"
               />
             </div>
             <li className={classes.menuli}>
@@ -271,6 +226,7 @@ const Header = () => {
                   <a
                     href="https://www.youtube.com/watch?v=XvqiVomcsr4"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     국세청 PDF 다운로드 방법
                   </a>
@@ -295,30 +251,13 @@ const Header = () => {
             <li className={classes.menuli}>
               <a href="#">서비스 문의하기</a>
             </li>
-            {/* <li className={classes.menuli}> */}
 
-            {/* </li> */}
-            {/* </li> */}
-            {/* </ul> */}
-            {/* </nav> */}
-            {/* <nav className={classes.snsnav}>
-            <ul>
-              <li className={classes.menuli}>
-                <img src={sns1} alt="logo" />
-              </li>
-              <li className={classes.menuli}>
-                <img src={sns2} alt="logo" />
-              </li>
-              <li className={classes.menuli}>
-                <img src={sns3} alt="logo" />
-              </li>
-            </ul>
-          </nav> */}
             <div className={classes.snsbox}>
               <a
                 href="https://www.youtube.com/channel/UCdR2xKktD4R008_-FDO7SEQ/featured"
                 title="월급날 tv 바로가기"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={sns1} alt="sns1" />
               </a>{" "}
@@ -326,6 +265,7 @@ const Header = () => {
                 href="https://blog.naver.com/payday_2000"
                 target="_blank"
                 title="월급날 블로그 바로가기"
+                rel="noopener noreferrer"
               >
                 <img src={sns2} alt="sns2" />
               </a>{" "}
@@ -333,6 +273,7 @@ const Header = () => {
                 href="https://www.today-payday.com/"
                 title="월급날 뉴스레터 바로가기"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={sns3} alt="sns3" />
               </a>
@@ -341,14 +282,7 @@ const Header = () => {
         </div>
       </header>
       {console.log("modal" + modal)}
-      <Modal
-        open={open}
-        onClose={handleClose}
-
-        // aria-labelledby="simple-modal-title"
-        // aria-describedby="simple-modal-description"
-      >
-        {/* {modal === "1" ? <DocumentInfo /> : <Test />} */}
+      <Modal open={open} onClose={handleClose}>
         {body}
       </Modal>
     </div>

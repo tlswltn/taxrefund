@@ -1,31 +1,34 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const ModalFooter = () => {
+const ModalFooter = (props) => {
   const useStyles = makeStyles({
     footer: {
       // display: "block",
+      borderRadius: "5px",
+      margin: "0 auto",
+      width: 600,
+      height: 30,
       fontSize: 14,
-      padding: "12px 16px",
+
+      // padding: "12px 16px",
       textAlign: "right",
+      backgroundColor: "blue",
       "& span": {
         padding: "6px 12px",
-        color: "#1976D2",
+        // color: "#1976D2",
+        color: "red",
 
-        fontSize: 13,
+        fontSize: 23,
       },
     },
-
-    // paddingTop: 25,
-    // boxSizing: "border-box",
-    // },
   });
 
   const classes = useStyles();
   return (
     <div>
-      <footer className={classes.footer}>
+      <div className={classes.footer}>
         <span>확인</span>
-      </footer>
+      </div>
     </div>
   );
 };

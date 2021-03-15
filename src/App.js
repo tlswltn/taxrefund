@@ -1,14 +1,8 @@
-// import "./App.css";
 import React from "react";
-import Main from "./Main";
+import Main from "./component/Main";
 
 function App() {
-  return (
-    <>
-      {<Main />}
-      {/* {<Login2 />} */}
-    </>
-  );
+  return <>{<Main />}</>;
 }
 
 export default App;

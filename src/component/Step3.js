@@ -1,15 +1,12 @@
 // import logo from "./images/pd_common_logo.gif";
-import bird from "./images/pd_taxRefund_callImg.png";
-import arrow from "./images/arrow.jpg";
+import bird from "../images/pd_taxRefund_callImg.png";
+import arrow from "../images/arrow.jpg";
 
 import { makeStyles } from "@material-ui/core/styles";
 
 const Step3 = () => {
   const useStyles = makeStyles({
     step3box: {
-      // display: "flex",
-      // alignItems: "center",
-      // justifyContent: "center",
       width: "100%",
       height: 500,
       backgroundColor: "#FFF7E3",
@@ -21,7 +18,6 @@ const Step3 = () => {
       width: 1000,
       height: 500,
       margin: "0 auto",
-      // border: "1px solid black",
     },
     leftbox: {
       width: 400,
@@ -29,20 +25,11 @@ const Step3 = () => {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      // border: "1px solid black",
     },
     rightbox: {
       width: 600,
       height: 500,
-      // display: "flex",
-      // flexDirection: "column",
-      // alignItems: "center",
-      // justifyItems: "center",
-      // display: "table-cell",
-      // verticalAlign: "middle",
-      //   display: table-cell;
-      // vertical-align: middle;
-      // border: "1px solid black",
+
       " & span ": {
         // textAlign: "center",
         paddingLeft: 100,
@@ -66,10 +53,8 @@ const Step3 = () => {
               fontSize: 28,
               fontWeight: 700,
               paddingTop: 150,
-              // paddingLeft: 100,
-              // textAlign: "center",
+
               paddingLeft: 100,
-              // lineHeight: 5,
             }}
           >
             연말정산 전화상담이 필요하세요?
