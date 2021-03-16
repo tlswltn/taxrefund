@@ -139,13 +139,13 @@ const Header = () => {
   const [open, setOpen] = React.useState(false);
   const [modal, setModal] = React.useState(0);
 
-  const handleOpen = (id) => {
+  const modalOpen = (id) => {
     console.log("id", id);
     setModal(id);
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const modalClose = () => {
     setOpen(false);
   };
 
@@ -187,7 +187,7 @@ const Header = () => {
               <ul>
                 <li
                   style={{ boxSizing: "border-box", paddingTop: 10 }}
-                  onClick={(e) => handleOpen("1")}
+                  onClick={(e) => modalOpen("1")}
                 >
                   <a>연말정산 제출서류 안내</a>
                 </li>
@@ -200,13 +200,13 @@ const Header = () => {
                     국세청 PDF 다운로드 방법
                   </a>
                 </li>
-                <li onClick={(e) => handleOpen("2")}>
+                <li onClick={(e) => modalOpen("2")}>
                   <a>
                     국세청 간소화 <br />
                     서비스 유의사항
                   </a>
                 </li>
-                <li onClick={(e) => handleOpen("3")}>
+                <li onClick={(e) => modalOpen("3")}>
                   <a>
                     연간 소득금액
                     <br /> 100만원 이하 요건
@@ -251,11 +251,11 @@ const Header = () => {
         </div>
       </header>
       {console.log("modal" + modal)}
-      <Modal open={open} onClose={handleClose}>
+      <Modal open={open} onClose={modalClose}>
         <>
           {modalbody}
           <div className={classes.mfooter}>
-            <p onClick={handleClose}>확인</p>
+            <p onClick={modalClose}>확인</p>
           </div>
         </>
       </Modal>
